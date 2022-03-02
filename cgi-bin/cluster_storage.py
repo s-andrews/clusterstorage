@@ -19,11 +19,11 @@ def main():
         return
 
     if form["action"].value == "login":
-        process_login(form["email"].value,form["password"].value)
+        process_login(form["username"].value,form["password"].value)
 
     elif form["action"].value == "validate_session":
         person = checksession(form["session"].value)
-        send_response(True,person["first_name"]+" "+person["last_name"])
+        send_response(True,person)
 
     else:
         # Everything else needs validation so let's check that first
