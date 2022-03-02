@@ -9,7 +9,7 @@ import cgitb
 cgitb.enable()
 
 storage_folder = "/bi/home/andrewss/Storage/"
-sessions_file = "/bi/home/andrewss/Storage/cluster_storage/sessions.txt"
+sessions_file = "/bi/home/andrewss/Storage/clusterstorage/sessions.txt"
 
 def main():
     form = cgi.FieldStorage()
