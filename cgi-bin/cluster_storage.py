@@ -58,6 +58,9 @@ def list_folders(person):
                     continue
                 
                 sections = line.strip().split("\t")
+                if len(sections) < 7:
+                    raise Exception(line)
+                    
                 folders.append({
                     "user": sections[0],
                     "folder": sections[1],
