@@ -127,13 +127,13 @@ function update_folders(){
                 for (let f in folders) {
                     let folder = folders[f]
                     t.row.add([
-                        project["user"],
-                        project["folder"],
-                        project["bytes"],
-                        project["readable"],
-                        project["count"],
-                        project["modified"],
-                        project["types"]
+                        folder["user"],
+                        folder["folder"],
+                        folder["bytes"],
+                        folder["readable"],
+                        folder["count"],
+                        folder["modified"],
+                        folder["types"]
                     ]).draw(false)
                 }
             },
