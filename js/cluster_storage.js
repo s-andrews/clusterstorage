@@ -127,7 +127,7 @@ function update_folders(){
                 let dtnewdata = []
                 for (let f in folders) {
                     let folder = folders[f]
-                    dtnewdata.add(
+                    dtnewdata.push(
                         [
                             folder["user"],
                             folder["folder"],
