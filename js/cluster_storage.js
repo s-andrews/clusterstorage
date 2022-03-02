@@ -135,7 +135,7 @@ function update_folders(){
                             folder["readable"],
                             folder["count"],
                             folder["modified"],
-                            folder["types"]
+                            folder["types"].replaceAll("):",")<br/>")
                         ]
                     )
                 }
