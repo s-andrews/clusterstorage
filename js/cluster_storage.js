@@ -124,18 +124,22 @@ function update_folders(){
                 let t = $('#projecttable').DataTable();
                 t.clear()
 
+                let dtnewdata = []
                 for (let f in folders) {
                     let folder = folders[f]
-                    t.row.add([
-                        folder["user"],
-                        folder["folder"],
-                        folder["bytes"],
-                        folder["readable"],
-                        folder["count"],
-                        folder["modified"],
-                        folder["types"]
-                    ]).draw(false)
+                    dtnewdata.add(
+                        [
+                            folder["user"],
+                            folder["folder"],
+                            folder["bytes"],
+                            folder["readable"],
+                            folder["count"],
+                            folder["modified"],
+                            folder["types"]
+                        ]
+                    )
                 }
+                t.rows.add(dtnewdata).draw()
             },
             error: function(message) {
                 $("#projectbody").clear()
