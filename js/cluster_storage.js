@@ -96,7 +96,8 @@ function process_login() {
                 $("#loginerror").hide()
                 session = sections[1]
 
-                Cookies.set("cluster_storage_session_id", session, { secure: true })
+                // This needs to be set insecurely because we're not operating over https
+                Cookies.set("cluster_storage_session_id", session, { secure: false })
                 show_login()
             },
             error: function(message) {
