@@ -62,7 +62,7 @@ function show_login() {
 
 function logout() {
     session_id = ""
-    Cookies.remove("imagetrack_session_id")
+    Cookies.remove("cluster_storage_session_id")
     $("#maincontent").hide()
     $('#projecttable').DataTable().clear()
     $("#logindiv").modal("show")
